@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [:create, :destroy]
     end
   end
-
+  # catch-all match GET request to index for all unmatch request 
   get "*path", to: "pages#index", via: :all
 end

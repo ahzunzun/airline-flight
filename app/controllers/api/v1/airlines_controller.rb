@@ -45,11 +45,11 @@ module Api
             end 
 
             private
-
+            # whitelist the paramerters allowed
             def airline_params
                 params.require(:airline).permit(:name, :image_url)
             end
-
+            # Include associated reviews to airline
             def options
                 @options ||= {include: %i[reviews]}
             end

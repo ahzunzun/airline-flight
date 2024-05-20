@@ -2,7 +2,7 @@ class Airline < ApplicationRecord
     has_many :reviews
 
     before_create :slugify
-
+    # Slugify to make it SEO friendly
     def slugify
         self.slug = name.parameterize
     end
